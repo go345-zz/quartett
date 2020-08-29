@@ -21,7 +21,49 @@ k1 = karten[0:5]
 k2 = karten[5:10]
 amZug = 1
 
+
+gesehen = []
+
+Einwohner = []
+Fläche = []
+BIP = []
+Happy = []
+
+
 def zug1(k):
+    durchschnitt_1 = 0
+    durchschnitt_2 = 0
+    durchschnitt_3 = 0
+    durchschnitt_4 = 0
+
+    gesehen.append(k)
+    Einwohner.append(k[1])
+    Fläche.append(k[2])
+    BIP.append(k[3])
+    Happy.append(k[4])
+
+    for i in range(len(BIP)):
+        durchschnitt_1 += Einwohner[i]
+        durchschnitt_2 += Fläche[i]
+        durchschnitt_3 += BIP[i]
+        durchschnitt_4 += Happy[i]
+
+    durchschnitt_1 /= len(BIP)
+    durchschnitt_2 /= len(BIP)
+    durchschnitt_3 /= len(BIP)
+    durchschnitt_4 /= len(BIP)
+
+    if k[1] > durchschnitt_1:
+        return 1
+    if k[2] > durchschnitt_2:
+        return 2
+    if k[3] > durchschnitt_3:
+        return 3
+    if k[4] > durchschnitt_4:
+        return 4
+    
+
+
     return randint(1,3)
 
 def zug2(k):
@@ -44,7 +86,7 @@ while k1 and k2:
     if amZug == 1:
         wahl1 = zug1(karte1)
     else:
-        wahl1 = zug2()
+        wahl1 = zug2(karte2)
     print("Zug Spieler 1:", attr[wahl1 - 1], karte1[wahl1])
     print("Spieler 2:", karte2[wahl1])
     if karte1[wahl1] > karte2[wahl1]:
