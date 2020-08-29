@@ -31,6 +31,10 @@ Happy = []
 
 def zugInfo(k):
     gesehen.append(k)
+    Einwohner.append(k[1])
+    Fläche.append(k[2])
+    BIP.append(k[3])
+    Happy.append(k[4])
 
 def zug1(k):
     durchschnitt_1 = 0
@@ -88,6 +92,7 @@ while k1 and k2:
     if amZug == 1:
         wahl1 = zug1(karte1)
     else:
+        zugInfo(karte1)
         wahl1 = zug2(karte2)
     print("Zug Spieler 1:", attr[wahl1 - 1], karte1[wahl1])
     print("Spieler 2:", karte2[wahl1])
