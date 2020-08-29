@@ -29,6 +29,8 @@ Fläche = []
 BIP = []
 Happy = []
 
+def zugInfo(k):
+    gesehen.append(k)
 
 def zug1(k):
     durchschnitt_1 = 0
