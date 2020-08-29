@@ -3,6 +3,7 @@ from random import randint,shuffle
 
 
 karten = [
+    ('test', 1, 2, 3)
     ('China',1433, 9.6, 13368073),
     ('Indien',1366, 3.3, 2718732),
     ('USA',329, 9.8, 20580250),
