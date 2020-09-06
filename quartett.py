@@ -45,11 +45,12 @@ BIP = []
 Happy = []
 
 def zugInfo(k):
-    gesehen.append(k)
-    Einwohner.append(k[1])
-    Fläche.append(k[2])
-    BIP.append(k[3])
-    Happy.append(k[4])
+    if k not in gesehen:
+        gesehen.append(k)
+        Einwohner.append(k[1])
+        Fläche.append(k[2])
+        BIP.append(k[3])
+        Happy.append(k[4])
 
 def zug1(k):
     durchschnitt_1 = 0
@@ -57,11 +58,12 @@ def zug1(k):
     durchschnitt_3 = 0
     durchschnitt_4 = 0
 
-    gesehen.append(k)
-    Einwohner.append(k[1])
-    Fläche.append(k[2])
-    BIP.append(k[3])
-    Happy.append(k[4])
+    if k not in gesehen:
+        gesehen.append(k)
+        Einwohner.append(k[1])
+        Fläche.append(k[2])
+        BIP.append(k[3])
+        Happy.append(k[4])
 
     for i in range(len(BIP)):
         durchschnitt_1 += Einwohner[i]
