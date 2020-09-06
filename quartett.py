@@ -94,8 +94,8 @@ while k1 and k2:
     else:
         zugInfo(karte1)
         wahl1 = zug2(karte2)
-    print("Zug Spieler 1:", attr[wahl1 - 1], karte1[wahl1])
-    print("Spieler 2:", karte2[wahl1])
+    print(colored(f"Zug Spieler 1:{attr[wahl1 - 1]} {karte1[wahl1]:,}", 'yellow'))
+    print(colored(f"Spieler 2:{karte2[wahl1]:,}", 'yellow'))
     if karte1[wahl1] > karte2[wahl1]:
         k1.insert(0,karte1)
         k1.insert(0,karte2)
@@ -105,14 +105,18 @@ while k1 and k2:
         k2.insert(0,karte1)
         k2.insert(0,karte2)
         amZug = 2
-        print("Karte Gegner")
-        
-        print("\nZug geht an spieler2\n")
+        print(colored("\nKarte Gegner:", 'red'))
+        print(colored(f"--- {karte1[0]} ---", 'red'))
+        print(colored(f"Einwohner: {karte1[1]}", 'red'))
+        print(colored(f"Fläche:{karte1[2]}", 'red'))
+        print(colored(f"BIP: {karte1[3]:,}", 'red'))
+        print(colored(f"Happy Planet Index: {karte1[4]}\n", 'red'))
+        print(colored("\nZug geht an Spieler2\n", 'green'))
 
     input("<")
 
 if k1:
     print("Spikler 1 gewinnt")
 else:
-    print("Spikler 2 gewinnt")
+    print(colored("Spieler 2 gewinnt", 'green'))
 print("\n")
