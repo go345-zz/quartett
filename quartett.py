@@ -1,6 +1,6 @@
 # coding=utf-8
 from random import randint,shuffle
-
+from termcolor import colored
 
 karten = [
     ('China',1433, 9.6, 13368073),
@@ -73,21 +73,21 @@ def zug1(k):
     return randint(1,3)
 
 def zug2(k):
-    return int(input("entscheide dich zwischen 1 und 2 und 3 "))
+    return int(input(colored("entscheide dich zwischen 1, 2, 3 und 4 ", 'cyan')))
 
-def zeigeKarte(k):
-    print(f"\n--- {k[0]} ---")
-    print(f"Einwohner: {k[1]}")
-    print(f"Fläche:{k[2]}")
-    print(f"BIP: {k[3]:,}\n")
 
 
 print("\n")
 while k1 and k2:
-    print("*****************************************************************************\nDu hast noch: ",len(k2)," Karten!")
+    print(colored("*****************************************************************************\nDu hast noch: "+str(len(k2))+" Karten!\n", 'magenta'))
     karte1 = k1.pop()
     karte2 = k2.pop() 
-    zeigeKarte(karte2)
+    print(colored("Deine Karte:", 'green'))
+    print(colored(f"--- {karte2[0]} ---", 'green'))
+    print(colored(f"Einwohner: {karte2[1]}", 'green'))
+    print(colored(f"Fläche:{karte2[2]}", 'green'))
+    print(colored(f"BIP: {karte2[3]:,}", 'green'))
+    print(colored(f"Happy Planet Index: {karte2[4]}\n", 'green'))
 
     if amZug == 1:
         wahl1 = zug1(karte1)
@@ -100,13 +100,13 @@ while k1 and k2:
         k1.insert(0,karte1)
         k1.insert(0,karte2)
         amZug = 1
-        print("\nZug geht an spieler1\n")
+       print(colored("\nZug geht an Spieler1\n", 'red'))
     else:
         k2.insert(0,karte1)
         k2.insert(0,karte2)
         amZug = 2
         print("Karte Gegner")
-        zeigeKarte(karte1)
+        
         print("\nZug geht an spieler2\n")
 
     input("<")
