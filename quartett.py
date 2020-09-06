@@ -3,16 +3,30 @@ from random import randint,shuffle
 from termcolor import colored
 
 karten = [
-    ('China',1433, 9.6, 13368073),
-    ('Indien',1366, 3.3, 2718732),
-    ('USA',329, 9.8, 20580250),
-    ('Indonesien',270, 1.9, 1022454),
-    ('Pakistan',216, 0.8, 314588),
-    ('Brasilien',211, 8.5, 1867818),
-    ('Nigeria',200, 0.9, 398186),
-    ('Bangladesch',163, 0.15, 288424),
-    ('Russland',145, 17.1, 1657290),
-    ('Mexiko',127, 2.0, 1222053)
+    ('China',1433, 9.6, 13368073, 25.7),
+    ('Indien',1366, 3.3, 2718732, 29.2),
+    ('USA',329, 9.8, 20580250,20.7),
+    ('Indonesien',270, 1.9, 1022454, 35.7),
+    ('Pakistan',216, 0.8, 314588, 31.5),
+    ('Brasilien',211, 8.5, 1867818, 34.3),
+    ('Nigeria',200, 0.9, 398186, 22.2),
+    ('Bangladesch',163, 0.148, 288424,38.4),
+    ('Russland',145, 17.1, 1657290, 18.7),
+    ('Mexiko',127, 2.0, 1222053, 40.7),
+    ('Nepal', 29,3, 0.147, 24, 30.5),
+    ('Südkorea', 51.5, 0.1, 1538000, 24.8),
+    ('Philippinen', 106.5, 0.343, 321, 35),
+    ('Kasachstan', 18, 2.72, 160.8, 19.1),
+    ('Iran', 80, 1.65, 431900,24),
+    ('Kongo', 81.3, 2.34, 41600, 30),
+    ('Afghanistan', 34, 0.652, 21100, 20.2),
+    ('Neuseeland', 4.8, 0.269, 200800, 31.3),
+    ('Australien', 24.3, 7.69, 1390000, 21.2),
+    ('Ägypten', 95.7, 1, 337000, 23.8),
+    ('Japan', 126, 0.377, 4880000, 28.3),
+    ('Vietnam', 95.4, 0.331, 220000, 40.3),
+    ('Tansania', 55.6, 0.947, 51600, 22.1),
+    ('Saudi Arabien', 32.3, 2.24, 683800, 22)
 ]
 shuffle(karten)
 attr = ['Einwohner','Fläche', 'BIP in $']
@@ -100,7 +114,7 @@ while k1 and k2:
         k1.insert(0,karte1)
         k1.insert(0,karte2)
         amZug = 1
-       print(colored("\nZug geht an Spieler1\n", 'red'))
+        print(colored("\nZug geht an Spieler1\n", 'red'))
     else:
         k2.insert(0,karte1)
         k2.insert(0,karte2)
@@ -113,10 +127,10 @@ while k1 and k2:
         print(colored(f"Happy Planet Index: {karte1[4]}\n", 'red'))
         print(colored("\nZug geht an Spieler2\n", 'green'))
 
-    input("<")
+    input(colored(">", 'cyan'))
 
 if k1:
-    print("Spikler 1 gewinnt")
+    print(colored("Spieler 1 gewinnt", 'red'))
 else:
     print(colored("Spieler 2 gewinnt", 'green'))
 print("\n")
