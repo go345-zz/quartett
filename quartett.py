@@ -29,7 +29,7 @@ karten = [
     ('Saudi Arabien', 32.3, 2.24, 683800, 22)
 ]
 shuffle(karten)
-attr = ['Einwohner','Fläche', 'BIP in $']
+attr = ['Einwohner','Fläche', 'BIP in $', 'Happy Planet Index']
 
 länge = int(len(karten)/2)
 k1 = karten[0:länge]
