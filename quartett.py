@@ -31,8 +31,9 @@ karten = [
 shuffle(karten)
 attr = ['Einwohner','Fläche', 'BIP in $']
 
-k1 = karten[0:5]
-k2 = karten[5:10]
+länge = int(len(karten)/2)
+k1 = karten[0:länge]
+k2 = karten[länge:]
 amZug = 1
 
 
