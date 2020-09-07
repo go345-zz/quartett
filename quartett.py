@@ -89,13 +89,12 @@ def zug1(k):
     
 
 
-    return randint(1,3)
+    return randint(1,4)
 
 def zug2(k):
-    while True:
-        wahl = input(colored("entscheide dich zwischen 1, 2, 3 und 4 ", 'cyan'))
-        if wahl == 1 or wahl == 2 or wahl == 3 or wahl == 4:
-            return int(wahl)
+    
+    wahl = input(colored("entscheide dich zwischen 1, 2, 3 und 4 ", 'cyan'))
+    
 
 
 print("\n")
