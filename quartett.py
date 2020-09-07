@@ -1,6 +1,8 @@
 # coding=utf-8
 from random import randint,shuffle
 from termcolor import colored
+import os
+os.system('clear')
 
 karten = [
     ('🇨🇳  -> China',1433, 9.6, 13368073, 25.7),
