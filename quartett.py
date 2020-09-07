@@ -133,6 +133,7 @@ while k1 and k2:
         print(colored("\nZug geht an Spieler2\n", 'green'))
 
     input(colored(">", 'cyan'))
+    print('\b')
 
 if k1:
     print(colored("Spieler 1 gewinnt", 'red'))
