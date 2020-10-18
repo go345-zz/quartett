@@ -93,8 +93,8 @@ def zug1(k):
 
 def zug2(k):
     
-    wahl = input(colored("entscheide dich zwischen 1, 2, 3 und 4 ", 'cyan'))
-    
+    return input(colored("entscheide dich zwischen 1, 2, 3 und 4 ", 'cyan'))
+        
 
 
 print("\n")
